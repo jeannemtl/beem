@@ -3,7 +3,8 @@
 Deploy to polygon
 
 Setup metamask * get your pk
-In terminal 
+
+Run
 >> export pk="your-private-key"
 
 Setup mumbai testnet on metamask
@@ -15,9 +16,10 @@ https://faucet.polygon.technology/
 
 In the project file ensure that .env.local is set to "local" on both items
 
-In terminal run
+Run
 >> npx hardhat run scripts/deploy.js --network mumbai
 
 Go back to .env.local and set both items to "testnet"
 
+Run
 >>npm run dev

@@ -14,7 +14,9 @@ https://mumbai.polygonscan.com/
 Send yourself some fake MATIC with the faucet
 https://faucet.polygon.technology/
 
-In the project file ensure that .env.local is set to "local" on both items
+In the project file ensure that .env.local in root, is set to "local" on both items
+ENVIRONMENT="local"
+NEXT_PUBLIC_ENVIRONMENT="local"
 
 Run
 >> npx hardhat run scripts/deploy.js --network mumbai

@@ -30,7 +30,7 @@ https://mumbai.polygonscan.com/
 Send yourself some fake MATIC with the faucet
 https://faucet.polygon.technology/
 
-Create a file called .env.local in root, is set to "local" on both items
+Create a file called .env.local in root, add the two lines and set to "local" on both items
 
 ENVIRONMENT="local"
 

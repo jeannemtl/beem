@@ -8,6 +8,7 @@ run
 >> npx hardhat
 
 
+Now
 Deploy to polygon
 
 Go to the hardhat.config file and uncomment out the following

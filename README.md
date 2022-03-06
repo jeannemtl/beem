@@ -32,8 +32,9 @@ https://faucet.polygon.technology/
 
 Create a file called .env.local in root, is set to "local" on both items
 
->>ENVIRONMENT="local"
->>NEXT_PUBLIC_ENVIRONMENT="local"
+ENVIRONMENT="local"
+
+NEXT_PUBLIC_ENVIRONMENT="local"
 
 Go back to the hardhat.config file and now uncomment out the mumbai parts
 

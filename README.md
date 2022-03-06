@@ -1,10 +1,24 @@
 # Basic Sample Project
+You need hardhat
+>> npm install --save-dev hardhat
+>> npx hardhat
+
 
 Deploy to polygon
 
-Setup metamask * get your pk
+Go to the hardhat.config file and uncomment out the following
+
+//mumbai: {
+//   url: "https://rpc-mumbai.maticvigil.com/",
+// accounts: [process.env.pk]
+//},
 
 Run
+>> npx hardhat node
+
+
+Setup metamask * get your pk
+In another window
 >> export pk="your-private-key"
 
 Setup mumbai testnet on metamask
@@ -17,6 +31,8 @@ https://faucet.polygon.technology/
 In the project file ensure that .env.local in root, is set to "local" on both items
 ENVIRONMENT="local"
 NEXT_PUBLIC_ENVIRONMENT="local"
+
+Go back to the hardhat.config file and now uncomment out the mumbai parts
 
 Run
 >> npx hardhat run scripts/deploy.js --network mumbai

@@ -1,15 +1,23 @@
-# Basic Sample Hardhat Project
+# Basic Sample Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+Deploy to polygon
 
-Try running some of the following tasks:
+Setup metamask * get your pk
+In terminal 
+>> export pk="your-private-key"
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+Setup mumbai testnet on metamask
+Go to the bottom of this page and click on setup mumbai
+https://mumbai.polygonscan.com/
+
+Send yourself some fake MATIC with the faucet
+https://faucet.polygon.technology/
+
+In the project file ensure that .env.local is set to "local" on both items
+
+In terminal run
+>> npx hardhat run scripts/deploy.js --network mumbai
+
+Go back to .env.local and set both items to "testnet"
+
+>>npm run dev

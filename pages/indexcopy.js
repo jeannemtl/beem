@@ -24,9 +24,6 @@ export default function Home(props) {
   /* see getServerSideProps */
   const { posts } = props.posts
   const { totalsupply } = props.totalsupply
-  console.log("TOTALSUPPLY222" + (props.totalsupply))
-
-
   const account = useContext(AccountContext)
 
   const router = useRouter()
@@ -36,17 +33,15 @@ export default function Home(props) {
 
   return (
     <div>
-
       <div className={postList}>
         {
           /* map over the posts array and render a button with the post title */
-          props.posts.map((post, index) => (
+          posts.map((post, index) => (
             <Link href={`/post/${post[2]}`} key={index}>
               <a>
                 <div className={linkStyle}>
                   <p className={postTitle}>{post[1]}</p>
                   <div className={arrowContainer}>
-                  <p>{props.totalsupply}</p>
                   <img
                       src='/right-arrow.svg'
                       alt='Right arrow'
@@ -57,12 +52,8 @@ export default function Home(props) {
               </a>
             </Link>
           ))
-
-
         }
       </div>
-
-
       <div className={container}>
         {
           (account === ownerAddress) && posts && !posts.length && (
@@ -104,18 +95,17 @@ export async function getServerSideProps() {
     const zora = new Zora(wallet, 1)
     const totalSupply = await zora.fetchTotalMedia()
 
-    console.log("totalsupply" + totalSupply.toString() + typeof totalSupply) // total supply of ZORA NFTs minted on the Ethereum Mainnet
+    console.log("totalsupply" + totalSupply) // total supply of ZORA NFTs minted on the Ethereum Mainnet
 
   const contract = new ethers.Contract(contractAddress, Blog.abi, provider)
   const data = await contract.fetchPosts()
   return {
     props: {
       posts: JSON.parse(JSON.stringify(data)),
-      totalsupply: totalSupply.toString()
+      totalsupply: JSON.parse(JSON.stringify(totalSupply))
     }
   }
 }
-
 
 const arrowContainer = css`
   display: flex;
@@ -140,12 +130,6 @@ const linkStyle = css`
 `
 
 const postList = css`
-  width: 700px;
-  margin: 0 auto;
-  padding-top: 50px;
-`
-
-const postTotal = css`
   width: 700px;
   margin: 0 auto;
   padding-top: 50px;

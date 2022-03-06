@@ -1,6 +1,10 @@
 # Basic Sample Project
 You need hardhat
+
+run
 >> npm install --save-dev hardhat
+
+run
 >> npx hardhat
 
 

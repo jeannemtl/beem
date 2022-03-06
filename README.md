@@ -11,12 +11,7 @@ run
 Now
 Deploy to polygon
 
-Go to the hardhat.config file and uncomment out the following
-
-//mumbai: {
-//   url: "https://rpc-mumbai.maticvigil.com/",
-// accounts: [process.env.pk]
-//},
+Go to the hardhat.config file and uncomment out mumbai section completely
 
 Run
 >> npx hardhat node

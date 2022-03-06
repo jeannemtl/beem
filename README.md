@@ -18,10 +18,12 @@ Run
 
 
 Setup metamask * get your pk
+
 In another window
 >> export pk="your-private-key"
 
 Setup mumbai testnet on metamask
+
 Go to the bottom of this page and click on setup mumbai
 https://mumbai.polygonscan.com/
 
@@ -29,6 +31,7 @@ Send yourself some fake MATIC with the faucet
 https://faucet.polygon.technology/
 
 In the project file ensure that .env.local in root, is set to "local" on both items
+
 ENVIRONMENT="local"
 NEXT_PUBLIC_ENVIRONMENT="local"
 

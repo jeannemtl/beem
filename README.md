@@ -30,10 +30,10 @@ https://mumbai.polygonscan.com/
 Send yourself some fake MATIC with the faucet
 https://faucet.polygon.technology/
 
-In the project file ensure that .env.local in root, is set to "local" on both items
+Create a file called .env.local in root, is set to "local" on both items
 
-ENVIRONMENT="local"
-NEXT_PUBLIC_ENVIRONMENT="local"
+>>ENVIRONMENT="local"
+>>NEXT_PUBLIC_ENVIRONMENT="local"
 
 Go back to the hardhat.config file and now uncomment out the mumbai parts
 
